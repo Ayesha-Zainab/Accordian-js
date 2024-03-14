@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="accordion">
+            <div class="flex">
+                <h2>Accordian menu-1 </h2>
+                <i class="ri-arrow-drop-down-line arrow"></i>
+            </div>
+
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et mollitia libero, ullam autem quo
+                    laboriosam ducimus animi minus aliquam cupiditate maiores impedit quam omnis debitis, numquam sint
+                    repellendus! Distinctio, laborum!</p>
+            </div>
+        </div>
+
+
+        <div class="accordion">
+            <div class="flex">
+                <h2>Accordian menu-2</h2>
+                <i class="ri-arrow-drop-down-line arrow"></i>
+            </div>
+
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et mollitia libero, ullam autem quo
+                    laboriosam ducimus animi minus aliquam cupiditate maiores impedit quam omnis debitis, numquam sint
+                    repellendus! Distinctio, laborum!</p>
+            </div>
+        </div>
+
+
+        <div class="accordion">
+            <div class="flex">
+                <h2>Accordian menu-3</h2>
+                <i class="ri-arrow-drop-down-line arrow"></i>
+            </div>
+
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et mollitia libero, ullam autem quo
+                    laboriosam ducimus animi minus aliquam cupiditate maiores impedit quam omnis debitis, numquam sint
+                    repellendus! Distinctio, laborum!</p>
+            </div>
+        </div>
+
+        <div class="accordion">
+            <div class="flex">
+                <h2>Accordian menu-4</h2>
+                <i class="ri-arrow-drop-down-line arrow"></i>
+            </div>
+
+            <div class="para">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et mollitia libero, ullam autem quo
+                    laboriosam ducimus animi minus aliquam cupiditate maiores impedit quam omnis debitis, numquam sint
+                    repellendus! Distinctio, laborum!</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+
+        var arrows = document.querySelectorAll('.arrow');
+        var paras = document.querySelectorAll('.para');
+
+        arrows.forEach(function (arrow, index) {
+            arrow.addEventListener('click', function () {
+                if (paras[index].style.display == 'block') 
+                {
+                    paras[index].style.display = 'none';
+                }
+                 else 
+                 {
+                    // Hide all paragraphs
+                    paras.forEach(function (para) {
+                        para.style.display = 'none';
+                    });
+                    // Show the clicked paragraph
+                    paras[index].style.display = 'block';
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
